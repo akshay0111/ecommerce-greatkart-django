@@ -124,7 +124,7 @@ def cart(request, total=0, quantity=0, cart_item=None):
         tax = (2*total)/100
         grand_total = total+tax
 
-    except ObjectNotExist:
+    except ObjectDoesNotExist:
         pass
 
     template = 'store/cart.html'
